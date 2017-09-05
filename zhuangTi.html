@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>专题列表a标签跳转</title>
+    <link rel="stylesheet" href="./less/base.less">
+    <link rel="stylesheet/less" href="./less/zhuangTi.less">
+    <script src="lib/less/less.js"></script>
+</head>
+
+<body>
+    <div id="layout">
+        <div class="main">
+            <header class="top">
+                <a href="./index.html" class="jiantou">
+                    <</a>
+
+                        <div class="title">专题列表</div>
+            </header>
+            <section class="list">
+                <ul class="dongMan">
+                    <script type="text/html" id="template-zhuangTi">
+                        {{each}}
+                        <li>
+                            <a href="{{$value.url}}"> 
+                            <img src="{{$value.img}}">
+                            <div class="name">{{$value.title}}</div>
+                             </a>
+                        </li>
+                        {{/each}}
+                    </script>
+                    <!-- <script type="text/html" id="template-lianzai">
+                        {{each}}
+                        <li>
+                            <a href="{{$value.url}}"> 
+                            <img src="{{$value.img}}" alt="/img">
+                            <div class="name">{{$value.name}}</div>
+                            <div class="episode">{{$value.episode}}</div>
+                            <div class="updateTime">{{$value.updateTime}}</div>
+                            <div class="downloadCount">下载次数:{{$value.downloadCount}}</div>
+                             </a>
+                        </li>
+                        {{/each}}
+                    </script> -->
+                </ul>
+            </section>
+        </div>
+    </div>
+    <script src="lib/jquery/jquery.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.js"></script>
+    <script src="js/template-web.js"></script>
+    <script src="./js/zhuangTi.js"></script>
+</body>
+
+</html>

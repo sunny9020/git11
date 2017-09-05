@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>红旅动漫</title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet/less" href="less/base.less">
+    <link rel="stylesheet/less" href="less/index.less">
+    <script src="lib/less/less.js"></script>
+</head>
+
+<body>
+    <!--layout 就是本项目的主体布局容器  -->
+    <div id="layout">
+        <!--主页面  -->
+        <div class="main">
+            <div class="cover"></div>
+            <!-- 状态栏 -->
+            <header class="top">
+                <div class="left">
+                    <span id="click" class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+                </div>
+                <div class="center">红旅动漫</div>
+                <div class="right">
+                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                </div>
+            </header>
+            <!-- 状态栏结束 -->
+            <!-- 轮播图 -->
+            <section id="slide">
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <!-- <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                </ol> -->
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <script id="lunbo" type="text/html">
+                            {{each}}
+                            <div class="item ">
+                                <img src="{{$value.img}}" alt="...">
+                                <div id="box">
+                                    <p>"{{$value.title}}"</p>
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                    </ol>
+                                </div>
+                                <div class="carousel-caption">
+                                </div>
+                            </div>
+                            {{/each}}
+                        </script>
+                    </div>
+                </div>
+
+            </section>
+            <!--轮播图结束 -->
+
+            <!--tab切换栏  -->
+            <section id="tab">
+                <ul class="nav-tabs">
+                    <li data-type='1'>新增连载</li>
+                    <li data-type='2'>新增完结</li>
+                    <li data-type='3'>推荐连载</li>
+                    <li data-type='4'>推荐完结</li>
+                </ul>
+                <div class="tab-content">
+                    <ul class=" clearfix moban"></ul>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!--tab栏模板引擎  -->
+    <script id="template-tab" type="text/html">
+        {{each}}
+        <li>
+            <a href="{{$value.url}}">
+                            <img src="{{$value.img}}" alt="">
+                        </a>
+            <div class="update">{{$value.update}}</div>
+            <div class="name">{{$value.name}}</div>
+        </li>
+        {{/each}}
+    </script>
+
+    <!--侧边栏  -->
+    <div id="list">
+        <ul class="list-ul">
+            <li><img src="./img/logo.jpg" alt=""></li>
+            <li class="lianzai"><a href="./lianzai.html">连载动漫-get</a> <span>></span></li>
+            <li class="zhuangti"><a href="./zhuangTi.html">专题列表-get</a> <span>></span></li>
+            <li class="about">关于<span>></span></li>
+        </ul>
+
+
+    </div>
+
+    <script src="lib/jquery/jquery.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.js"></script>
+    <script src="js/template-web.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

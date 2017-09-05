@@ -1,0 +1,187 @@
+#layout {
+  max-width: 640px;
+  min-width: 300px;
+  margin: 0px auto;
+  background-color: #ccc;
+}
+.main {
+  transition: all 1s;
+  transform: translateX(0);
+  width: 100%;
+  position: relative;
+}
+.cover {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: .5;
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.top {
+  position: relative;
+  height: 60px;
+  width: 100%;
+}
+.top .left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 60px;
+  color: red;
+  text-align: center;
+  font-size: 30px;
+  line-height: 60px;
+}
+.top .center {
+  padding-left: 60px;
+  padding-right: 60px;
+  height: 60px;
+  widows: 100%;
+  font-size: 24px;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  box-sizing: border-box;
+  line-height: 60px;
+}
+.top .right {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  font-size: 30px;
+  color: red;
+  right: 0;
+  top: 0;
+  line-height: 60px;
+}
+#slide {
+  width: 100%;
+  position: relative;
+}
+#slide ol {
+  position: absolute;
+  bottom: 0px;
+  left: 580px;
+}
+#slide img {
+  height: 220px;
+}
+#slide #box {
+  width: 100%;
+  height: 40px;
+  line-height: 20px;
+  opacity: 0.5;
+  padding: 10px;
+  background-color: black;
+  position: absolute;
+  bottom: 00px;
+}
+#slide #box p {
+  font-size: 16px;
+  color: #fff;
+}
+#myTab {
+  background-color: pink;
+}
+#myTab li {
+  width: 25%;
+  text-align: center;
+  font-size: 18px;
+  background-color: #fff;
+}
+#myTab a:hover {
+  color: red;
+  border-bottom: 2px solid red;
+}
+#tab {
+  width: 100%;
+}
+#tab .nav-tabs {
+  width: 100%;
+  background-color: #fff;
+}
+#tab .nav-tabs li {
+  width: 25%;
+  height: 60px;
+  line-height: 60px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+#tab .nav-tabs li:hover {
+  border-bottom: 4px red solid;
+}
+#tab .tab-content {
+  width: 100%;
+}
+#tab .tab-content > ul {
+  width: 100%;
+}
+#tab .tab-content > ul > li {
+  position: relative;
+  float: left;
+  width: 50%;
+  border: 1px solid #666;
+  box-sizing: border-box;
+  text-align: center;
+}
+#tab .tab-content > ul > li img {
+  width: 90%;
+  height: 250px;
+}
+#tab .tab-content > ul > li .update {
+  position: absolute;
+  text-align: center;
+  bottom: 35px;
+  left: 5%;
+  width: 90%;
+  height: 40px;
+  line-height: 40px;
+  background-color: rgba(25, 10, 25, 0.5);
+}
+#tab .tab-content > ul > li .name {
+  text-align: center;
+  height: 50px;
+  line-height: 60px;
+}
+#list {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  margin: 0 auto;
+  top: 0px;
+  left: -100%;
+  background-color: #fff;
+  transition: all 1s;
+}
+#list .list-ul > li {
+  border-bottom: 1px solid #666;
+  line-height: 40px;
+  position: relative;
+  text-indent: 1em;
+}
+#list .list-ul > li:first-child {
+  text-indent: 0;
+}
+#list .list-ul > li > a {
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+}
+#list .list-ul > li > img {
+  width: 100%;
+}
+#list .list-ul > li > span {
+  position: absolute;
+  right: 10px;
+  color: red;
+  font-size: 20px;
+}

@@ -1,0 +1,62 @@
+#layout {
+  max-width: 640px;
+  min-width: 300px;
+  margin: 0px auto;
+  background-color: #ccc;
+}
+.main {
+  transition: all 1s;
+  transform: translateX(0);
+  width: 100%;
+  position: relative;
+}
+.top {
+  position: relative;
+  height: 60px;
+  width: 100%;
+  line-height: 60px;
+  background-color: #fff;
+  border-bottom: 2px solid #ccc;
+  box-shadow: 0px 0px 5px #ccc;
+}
+.top .jiantou {
+  position: absolute;
+  left: 15px;
+  top: 0px;
+  color: red;
+  font-weight: bold;
+  font-size: 30px;
+  text-decoration: none;
+}
+.top .title {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+.list {
+  width: 100%;
+  position: relative;
+}
+.list ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  background-color: #fff;
+}
+.list ul li {
+  height: 150px;
+  line-height: 25px;
+  border-bottom: 1px solid #ccc;
+}
+.list ul li a {
+  text-decoration: none;
+  color: #ccc;
+}
+.list ul li img {
+  width: 100%;
+  vertical-align: middle;
+}
+.list ul li .name {
+  font-size: 16px;
+}
